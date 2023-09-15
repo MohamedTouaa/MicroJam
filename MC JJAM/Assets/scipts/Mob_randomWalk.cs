@@ -43,12 +43,6 @@ public class Mob_randomWalk : MonoBehaviour
             currentPoint = paths[pathCount];
         }
     }
-    void RandomizePaths()
-    {
-        Transform t;
-        int k = Random.Range(0, paths.Count);
-        
-
-    }
+   
 
 }
