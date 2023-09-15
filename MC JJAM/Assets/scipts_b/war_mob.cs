@@ -24,8 +24,9 @@ public class war_mob : MonoBehaviour
 
        
     }
-    private void Update()
+    virtual public  void Update()
     {
+
         if (CanAttack && theTarget != null)
         {
             transform.LookAt(new Vector3(theTarget.position.x, theTarget.position.y, theTarget.position.z));

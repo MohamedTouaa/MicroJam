@@ -4,26 +4,33 @@ using UnityEngine;
 
 public class Solder : war_mob
 {
-    Transform camp_Enemy;
+    public Transform camp_Enemy;
     public override void Start()
     {
         base.Start();
-        camp_Enemy = GameObject.Find("camp enemy").transform;
+        if(transform.tag != "Enemy")
+            camp_Enemy = GameObject.Find("camp enemy").transform;
         
+    }
+    public override void Update()
+    {
+        base.Update();
+        if (theTarget == null)
+            agent.SetDestination(camp_Enemy.position);
     }
     public override void Attack()
     {
         base.Attack();
         if (theTarget != null)
             theTarget.GetComponent<war_mob>().TakeDmg(dmg);
-        else
-            theTarget = camp_Enemy;
+     ;
     }
     // Start is called before the first frame update
     private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<war_mob>() && other.tag == "enemy")
+        if ( other.tag == "Enemy")
         {
+            print("aaaaaaaaaa");
             CanAttack = true;
             theTarget = other.transform;
             agent.SetDestination(other.transform.position);

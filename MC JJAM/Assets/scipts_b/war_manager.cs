@@ -78,6 +78,8 @@ public class war_manager : MonoBehaviour
             {
                 GameObject a = Instantiate(mobs[input_id].transform, GetMousePositionInWorld(), Quaternion.identity,parent).gameObject;
                 selectMob.amount--;
+                a.AddComponent<Rigidbody>();
+                a.GetComponent<Rigidbody>().isKinematic = true;
                 mobs_instance.Add(a);
             }
             RefreshNumber(input_id);
