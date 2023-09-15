@@ -11,9 +11,7 @@ public class Mob_randomWalk : MonoBehaviour
     public int pathCount = 0;
     private void Awake()
     {
-        RandomizePaths();
-        RandomizePaths();
-        RandomizePaths();
+  
 
     }
     private void Start()
@@ -25,7 +23,10 @@ public class Mob_randomWalk : MonoBehaviour
 
     private void Update()
     {
-        agent.SetDestination(currentPoint.position);
+        if (currentPoint != null)
+            agent.SetDestination(currentPoint.position);
+        else
+            currentPoint = paths[pathCount];
         checkPointDistance();
     }
     void checkPointDistance()
@@ -38,7 +39,7 @@ public class Mob_randomWalk : MonoBehaviour
         if(dis < 5f)
         {
             print("it coo");
-            pathCount++;
+            pathCount = Random.Range(0, paths.Count);
             currentPoint = paths[pathCount];
         }
     }
@@ -46,13 +47,7 @@ public class Mob_randomWalk : MonoBehaviour
     {
         Transform t;
         int k = Random.Range(0, paths.Count);
-        t = paths[k];
-        if (k + 1 <= paths.Count)
-            paths[k] = paths[k + 1];
-        else if (k - 1 >= 0)
-            paths[k] = paths[k - 1];
-        else
-            paths[k] = paths[Random.Range(0, paths.Count)];
+        
 
     }
 
