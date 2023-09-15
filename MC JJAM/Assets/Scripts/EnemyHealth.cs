@@ -1,31 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
-{
-    public int maxHealth = 1;  // Maximum health of the enemy.
-    private int currentHealth;   // Current health of the enemy.
 
-    private void Start()
+public class EnemyHealth : MonoBehaviour, IDamagable
+{
+    [SerializeField] private float maxHealth = 1f;
+
+    private float currentHealth;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        currentHealth = maxHealth; // Initialize current health to maximum health.
+        currentHealth = maxHealth;
     }
 
-    // Method to apply damage to the enemy.
-    public void TakeDamage(int damage)
+    // Update is called once per frame
+    void Update()
     {
-        currentHealth -= damage; // Reduce current health by the amount of damage taken.
 
-        // Check if the enemy's health has dropped to or below zero.
+    }
+    public void Damage(float damageAmount)
+    {
+        print("take dmg");
+        currentHealth -= damageAmount;
+
         if (currentHealth <= 0)
         {
-            Die(); // Call a method to handle enemy death (e.g., play death animation and remove the enemy).
+            Die();
+
         }
     }
-
-    // Method to handle the enemy's death.
     private void Die()
     {
-        // Perform any death-related actions here, such as playing death animations, dropping loot, or removing the enemy from the scene.
-        Destroy(gameObject); // For simplicity, we'll just destroy the enemy GameObject when it dies.
+        Destroy(gameObject);
     }
 }

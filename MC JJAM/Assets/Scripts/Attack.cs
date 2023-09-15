@@ -2,27 +2,41 @@ using UnityEngine;
 
 public class AxeAttack : MonoBehaviour
 {
-    public int damage = 1; // Amount of damage to deal to enemies.
-
-    private bool isAttacking = false;
+    public bool isAttacking = false;
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Check for a left mouse button click (or any other input you prefer).
+        if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
-            // Trigger the attack animation.
+            isAttacking = true;
             GetComponent<Animator>().SetTrigger("Attack");
         }
     }
 
     // Called when the attack animation hits something.
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (isAttacking && other.CompareTag("Enemy")) // Check if the collision is with an enemy.
+        if (isAttacking)
         {
-            // Deal damage to the enemy (you might want to call a method on the enemy's script).
-            other.GetComponent<EnemyHealth>().TakeDamage(damage);
+            // Check if the collision object implements the IDamagable interface.
+            IDamagable damagable = other.GetComponent<IDamagable>();
+            if (damagable != null)
+            {
+                float damage = CalculateDamage(); // Calculate the damage to deal.
+                damagable.Damage(damage); // Deal damage to the object.
+            }
         }
+    }
+
+    private float CalculateDamage()
+    {
+        // You can calculate damage based on player stats or any other relevant factors.
+        // For example, you can use the player's strength or weapon stats.
+        // Replace this with your own logic.
+        float baseDamage = 1f; // Replace with your base damage value.
+        // Calculate the damage based on your game's mechanics.
+        float finalDamage = baseDamage; // You can adjust this formula based on your game's mechanics.
+        return finalDamage;
     }
 
     // Called when the attack animation begins.
@@ -34,6 +48,7 @@ public class AxeAttack : MonoBehaviour
     // Called when the attack animation ends.
     public void EndAttack()
     {
+        
         isAttacking = false;
     }
 }
