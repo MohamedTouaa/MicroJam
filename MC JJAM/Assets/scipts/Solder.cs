@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Solder : war_mob
 {
+    Transform camp_Enemy;
     public override void Start()
     {
         base.Start();
+        camp_Enemy = GameObject.Find("camp enemy").transform;
         
     }
     public override void Attack()
@@ -15,7 +17,7 @@ public class Solder : war_mob
         if (theTarget != null)
             theTarget.GetComponent<war_mob>().TakeDmg(dmg);
         else
-            agent.SetDestination(transform.forward * 2);
+            theTarget = camp_Enemy;
     }
     // Start is called before the first frame update
     private void OnTriggerStay(Collider other)

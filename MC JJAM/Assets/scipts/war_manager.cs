@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class war_manager : MonoBehaviour
@@ -14,6 +16,27 @@ public class war_manager : MonoBehaviour
     [SerializeField] int number_advanced;
     Transform parent;
 
+
+    [Header("UI")]
+
+    [SerializeField] TextMeshProUGUI allSolder;
+    [SerializeField] TextMeshProUGUI m_archer;
+    [SerializeField] TextMeshProUGUI m_solders;
+    [SerializeField] TextMeshProUGUI m_advanced;
+
+    [SerializeField] saveP gameStat;
+
+
+
+    private void Awake()
+    {
+   
+        number_Archer = gameStat.number_archer;
+        number_solders = gameStat.number_solders;
+        number_advanced = gameStat.number_advanced;
+
+
+    }
     private void Start()
     {
         parent = GameObject.Find("Army_Parent").transform;
@@ -22,6 +45,13 @@ public class war_manager : MonoBehaviour
     }
     private void Update()
     {
+
+        allSolder.text = " all : " + gameStat.total_mobs.ToString();
+        m_archer.text = " archers : " + number_Archer.ToString();
+        m_solders.text = " solders : " + number_solders.ToString();
+        m_advanced.text = " advanced : " + number_advanced.ToString();
+
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selectMob.selectedmob = mobs[0];

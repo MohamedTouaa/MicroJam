@@ -17,6 +17,6 @@ MonoBehaviour:
   number_archer: 50
   number_solders: 35
   number_advanced: 15
-  number_ship: 0
-  number_cow: 0
-  number_humain: 0
+  number_ship: 30
+  number_cow: 20
+  number_humain: 20

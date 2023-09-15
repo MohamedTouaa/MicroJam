@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class HubManager : MonoBehaviour
 {
@@ -20,6 +21,13 @@ public class HubManager : MonoBehaviour
         m_archer.text = "archers : " + Game_stat.number_archer.ToString();
         m_solders.text = "solders : " + Game_stat.number_solders.ToString();
         m_advanced.text = "advanced : " +Game_stat.number_advanced.ToString();
+    }
+    private void Start()
+    {
+        if(Game_stat.day >= 6)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
     void checkWhoLive()
     {
