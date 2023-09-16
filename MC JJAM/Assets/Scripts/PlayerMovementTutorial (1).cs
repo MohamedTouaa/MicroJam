@@ -18,6 +18,7 @@ public class PlayerMovementTutorial : MonoBehaviour
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
 
+
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
 
@@ -35,11 +36,12 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     Rigidbody rb;
 
+    [SerializeField] audioManagers manager;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
+        manager.playS("night_ambience");
         readyToJump = true;
     }
 
@@ -83,7 +85,7 @@ public class PlayerMovementTutorial : MonoBehaviour
     {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
+        
         // on ground
         if(grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);

@@ -36,7 +36,7 @@ public class Mob_randomWalk : MonoBehaviour
             pathCount = -1;
         }
         float dis = Vector3.Distance(agent.transform.position, currentPoint.position);
-        if(dis < 5f)
+        if(dis < 7f)
         {
             print("it coo");
             pathCount = Random.Range(0, paths.Count);

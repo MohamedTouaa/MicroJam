@@ -40,7 +40,7 @@ public class Animals_randomizer : MonoBehaviour
 
     private void Update()
     {
-        if (currentPoint != null)
+        if (currentPoint != null && gameObject.activeInHierarchy)
         {
             agent.SetDestination(currentPoint.position);
             //transform.parent.LookAt(currentPoint.position);

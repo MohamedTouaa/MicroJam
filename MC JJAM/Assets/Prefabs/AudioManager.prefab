@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3833280723756349782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7354337143546017580}
+  - component: {fileID: 7418173789313000323}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7354337143546017580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3833280723756349782}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.0386174, y: -1.596348, z: 2.8372555}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7418173789313000323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3833280723756349782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f37c14e5c99774a9cc4427fb9734d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: foot_step
+    clip: {fileID: 8300000, guid: 57fa9f56ab73d9c4db25a125d645ab52, type: 3}
+    volume: 1
+    pitch: 0.5
+    specialBlend: 1
+    loop: 1
+    startS: 1
+    sources: {fileID: 0}
+  - name: humain_die
+    clip: {fileID: 8300000, guid: 4f437f1126b734c45b93c8f754ff7951, type: 3}
+    volume: 0.35
+    pitch: 0.72
+    specialBlend: 1
+    loop: 0
+    startS: 0
+    sources: {fileID: 0}
+  - name: sheep_die
+    clip: {fileID: 8300000, guid: 6d5ae2560b4fb62498cb4b0bc628601d, type: 3}
+    volume: 0.56
+    pitch: 1
+    specialBlend: 1
+    loop: 0
+    startS: 0
+    sources: {fileID: 0}
+  - name: night_ambience
+    clip: {fileID: 8300000, guid: 097be3fec0fa553499ed7d300869ebc5, type: 3}
+    volume: 0.98
+    pitch: 1
+    specialBlend: 1
+    loop: 1
+    startS: 1
+    sources: {fileID: 0}
+  - name: cow_die
+    clip: {fileID: 8300000, guid: ae2a92e5387018a45932150bdcf9e76d, type: 3}
+    volume: 0.6
+    pitch: 1
+    specialBlend: 1
+    loop: 0
+    startS: 0
+    sources: {fileID: 0}
+  - name: sword
+    clip: {fileID: 8300000, guid: f7a6b997a3cc5ac4ea4a37125bdba8fa, type: 3}
+    volume: 0.4
+    pitch: 1
+    specialBlend: 1
+    loop: 0
+    startS: 0
+    sources: {fileID: 0}

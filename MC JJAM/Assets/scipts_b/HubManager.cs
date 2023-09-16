@@ -13,21 +13,31 @@ public class HubManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI m_archer;
     [SerializeField] TextMeshProUGUI m_solders;
     [SerializeField] TextMeshProUGUI m_advanced;
+    audioManagers mm;
 
     private void Awake()
     {
+     
         checkWhoLive();
+        initUI();
+    }
+    public void initUI()
+    {
         allSolder.text = "all : " + Game_stat.total_mobs.ToString();
         m_archer.text = "archers : " + Game_stat.number_archer.ToString();
         m_solders.text = "solders : " + Game_stat.number_solders.ToString();
-        m_advanced.text = "advanced : " +Game_stat.number_advanced.ToString();
+        m_advanced.text = "advanced : " + Game_stat.number_advanced.ToString();
     }
     private void Start()
     {
+        mm = GameObject.Find("AudioManager").GetComponent<audioManagers>();
+   
+        mm.playS("night_ambience");
+        mm.playS("camp_fire");
         Game_stat.day++;
         if(Game_stat.day >= 6)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     void checkWhoLive()

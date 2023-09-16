@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Hunt_Manager : MonoBehaviour
 {
-    [SerializeField]float timer = 30f;
+    [SerializeField]float timer = 300f;
     float timer2 = 3f;
     [SerializeField] List<GameObject> ms;
     [SerializeField] saveP gameStat;
@@ -18,19 +18,23 @@ public class Hunt_Manager : MonoBehaviour
     [SerializeField] TextMeshProUGUI solder_feeded;
     [SerializeField] TextMeshProUGUI solder_kill;
     [SerializeField] TextMeshProUGUI day;
+    [SerializeField] TextMeshProUGUI Timer;
 
 
 
     void Start()
     {
         current_m = 0;
+        if (gameStat.day > 0)
+            timer -= gameStat.day * 5;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(timer>=0)
+            Timer.text = " Timer :  " + (int)timer;
         int remaining = (gameStat.total_mobs - ((gameStat.number_ship * 2) + (gameStat.number_cow * 3) + (gameStat.number_humain * 3)));
         animals_kill.text =  " Animals killed \n sheeps : " + gameStat.number_ship + "\n cows : " + gameStat.number_cow + " \n humains :" + gameStat.number_humain;
         solder_feeded.text = " Solders fed :\n      " + ((gameStat.number_ship * 2) + (gameStat.number_cow * 3) + (gameStat.number_humain * 3));

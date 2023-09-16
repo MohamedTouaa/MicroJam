@@ -9,17 +9,22 @@ public class AxeAttack : MonoBehaviour
     public TextMeshProUGUI sheep;
     public TextMeshProUGUI cow;
     public TextMeshProUGUI humain;
+    audioManagers mm;
     private void Start()
     {
+        GameObject a = GameObject.Find("Player");
+        mm = a.transform.GetChild(3).GetComponent<audioManagers>();
         game_stat.number_cow = 0;
             game_stat.number_ship = 0;
             game_stat.number_humain = 0;
     }
+    
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             isAttacking = true;
+            mm.playS("sword");
             GetComponent<Animator>().SetTrigger("Attack");
         }
         sheep.text = " sheep : " + game_stat.number_ship;
