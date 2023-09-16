@@ -7,7 +7,9 @@ public class EnemyHealth : MonoBehaviour, IDamagable
 {
     [SerializeField] private float maxHealth = 1f;
 
-    private float currentHealth;
+    public float currentHealth;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class EnemyHealth : MonoBehaviour, IDamagable
 
         if (currentHealth <= 0)
         {
+
             Die();
 
         }

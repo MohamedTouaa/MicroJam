@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 0
   total_mobs: 100
-  number_archer: 50
-  number_solders: 35
+  number_archer: 45
+  number_solders: 40
   number_advanced: 15
-  number_ship: 30
-  number_cow: 20
-  number_humain: 20
+  number_ship: 300
+  number_cow: 360
+  number_humain: 2112

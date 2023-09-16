@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2445716942103413631}
   m_Layer: 0
   m_Name: CowS
-  m_TagString: Enemy
+  m_TagString: cow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +108,11 @@ PrefabInstance:
     - target: {fileID: 1437843223697391501, guid: de04f876edd26244cb5db9b7829e63f9,
         type: 3}
       propertyPath: m_Name
+      value: cow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437843223697391501, guid: de04f876edd26244cb5db9b7829e63f9,
+        type: 3}
+      propertyPath: m_TagString
       value: cow
       objectReference: {fileID: 0}
     - target: {fileID: 1591295974159657166, guid: de04f876edd26244cb5db9b7829e63f9,
@@ -544,6 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  currentHealth: 0
 --- !u!195 &5574895344974502679
 NavMeshAgent:
   m_ObjectHideFlags: 0

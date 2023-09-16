@@ -1,9 +1,20 @@
+using TMPro;
 using UnityEngine;
 
 public class AxeAttack : MonoBehaviour
 {
     public bool isAttacking = false;
+    [SerializeField] saveP game_stat;
 
+    [SerializeField] TextMeshProUGUI sheep;
+    [SerializeField] TextMeshProUGUI cow;
+    [SerializeField] TextMeshProUGUI humain;
+    private void Start()
+    {
+        game_stat.number_cow = 0;
+            game_stat.number_ship = 0;
+            game_stat.number_humain = 0;
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !isAttacking)
@@ -11,10 +22,13 @@ public class AxeAttack : MonoBehaviour
             isAttacking = true;
             GetComponent<Animator>().SetTrigger("Attack");
         }
+        sheep.text = " sheep : " + game_stat.number_ship;
+        cow.text = " cow : " + game_stat.number_cow;
+        humain.text = " humain : " + game_stat.number_humain;
     }
 
     // Called when the attack animation hits something.
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (isAttacking)
         {
@@ -24,6 +38,19 @@ public class AxeAttack : MonoBehaviour
             {
                 float damage = CalculateDamage(); // Calculate the damage to deal.
                 damagable.Damage(damage); // Deal damage to the object.
+
+              if(other.GetComponent<EnemyHealth>().currentHealth <= 0)
+                {
+                    if (other.tag == "cow")
+                        game_stat.number_cow += 1;
+                    if (other.tag == "sheep")
+                        game_stat.number_ship += 1;
+                    if (other.tag == "humain")
+                        game_stat.number_humain += 1;
+
+                }
+
+
             }
         }
     }

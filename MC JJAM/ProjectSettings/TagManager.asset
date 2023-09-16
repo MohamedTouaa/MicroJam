@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - sheep
+  - cow
+  - humain
   layers:
   - Default
   - TransparentFX
