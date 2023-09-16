@@ -24,6 +24,7 @@ public class HubManager : MonoBehaviour
     }
     private void Start()
     {
+        Game_stat.day++;
         if(Game_stat.day >= 6)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

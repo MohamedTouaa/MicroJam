@@ -17,8 +17,10 @@ public class Animals_randomizer : MonoBehaviour
     }
     private void Start()
     {
-
-        agent = transform.GetChild(0).GetComponent<NavMeshAgent>();
+        if(!GetComponent<NavMeshAgent>()) 
+            agent = transform.GetChild(0).GetComponent<NavMeshAgent>();
+        else
+            agent = GetComponent<NavMeshAgent>();
 
         int n = paths.Count;
         for (int i = 0; i < n - 1; i++)

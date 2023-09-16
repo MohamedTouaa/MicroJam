@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199383357a9cb5945bd06a57751c63b9, type: 3}
   m_Name: game_stat
   m_EditorClassIdentifier: 
-  day: 0
-  total_mobs: 100
-  number_archer: 45
-  number_solders: 40
-  number_advanced: 15
-  number_ship: 300
-  number_cow: 360
-  number_humain: 2112
+  day: 1
+  total_mobs: 45
+  number_archer: 40
+  number_solders: 15
+  number_advanced: 0
+  number_ship: 2
+  number_cow: 3
+  number_humain: 0

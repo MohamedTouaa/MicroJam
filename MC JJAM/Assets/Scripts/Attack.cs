@@ -6,9 +6,9 @@ public class AxeAttack : MonoBehaviour
     public bool isAttacking = false;
     [SerializeField] saveP game_stat;
 
-    [SerializeField] TextMeshProUGUI sheep;
-    [SerializeField] TextMeshProUGUI cow;
-    [SerializeField] TextMeshProUGUI humain;
+    public TextMeshProUGUI sheep;
+    public TextMeshProUGUI cow;
+    public TextMeshProUGUI humain;
     private void Start()
     {
         game_stat.number_cow = 0;
