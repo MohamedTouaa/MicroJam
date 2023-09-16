@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class HubManager : MonoBehaviour
 {
@@ -15,9 +16,10 @@ public class HubManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI m_advanced;
     audioManagers mm;
 
+    float Timerr = 18f;
     private void Awake()
     {
-     
+       mm = Camera.main.transform.GetChild(0).GetComponent<audioManagers>();
         checkWhoLive();
         initUI();
     }
@@ -28,17 +30,28 @@ public class HubManager : MonoBehaviour
         m_solders.text = "solders : " + Game_stat.number_solders.ToString();
         m_advanced.text = "advanced : " + Game_stat.number_advanced.ToString();
     }
+    private void Update()
+    {
+        
+    }
     private void Start()
     {
+
+        if(Game_stat.day == 1)
+        {
+            print("day 1");
+            mm.playS("nar1");
+        }
         mm = GameObject.Find("AudioManager").GetComponent<audioManagers>();
    
         mm.playS("night_ambience");
         mm.playS("camp_fire");
-        Game_stat.day++;
-        if(Game_stat.day >= 6)
+        
+        if(Game_stat.day >= 3)
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
+        
     }
     void checkWhoLive()
     {

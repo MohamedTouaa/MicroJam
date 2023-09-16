@@ -9,7 +9,7 @@ public class restartGAme : MonoBehaviour
     [SerializeField] HubManager h;
     public void Restart()
     {
-        g1.day = g2.day;
+        g1.day = 1;
         g1.total_mobs = g2.total_mobs;
         g1.number_archer = g2.number_archer;
         g1.number_solders = g2.number_solders;
@@ -17,7 +17,8 @@ public class restartGAme : MonoBehaviour
         g1.number_ship = g2.number_ship;
         g1.number_cow = g2.number_cow; 
         g1.number_humain = g2.number_humain;
-        h.initUI();
+        g1.number_spawner = g2.number_spawner;
+        h?.initUI();
     }
 
 }

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: gameBalance
   m_EditorClassIdentifier: 
   day: 1
-  total_mobs: 100
-  number_archer: 50
-  number_solders: 35
-  number_advanced: 15
+  total_mobs: 50
+  number_archer: 25
+  number_solders: 20
+  number_advanced: 5
   number_ship: 100
   number_cow: 100
   number_humain: 100
+  number_spawner: 25

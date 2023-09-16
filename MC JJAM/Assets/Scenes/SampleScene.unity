@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.097
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.00026309045, g: 0.0041784407, b: 0.012066812, a: 0.097}
+  m_IndirectSpecularColor: {r: 0.0002633093, g: 0.0041743037, b: 0.012092506, a: 0.097}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 700}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -2007,7 +2007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6b3b249335e084ab53b551c3c15796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 80
+  timer: 60
   ms:
   - {fileID: 1702456527}
   - {fileID: 1768742}
@@ -4693,8 +4693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d880e1abf97824dafcd5e07a5df8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 400
-  sensY: 400
+  sensX: 200
+  sensY: 200
   orientation: {fileID: 539327754}
 --- !u!1 &1702456527
 GameObject:
@@ -6107,6 +6107,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 32ce5a971b22c98438148bce7f1b4c2b, type: 3}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a0fba5a78b9e6c42966fcd258c80486, type: 3}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: nar2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[7].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[6].specialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
+        type: 3}
+      propertyPath: sounds.Array.data[7].specialBlend
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6128,12 +6183,12 @@ PrefabInstance:
     - target: {fileID: 5738031753311790473, guid: 923927c7b730484438a6a227aa0a9eb6,
         type: 3}
       propertyPath: m_TreeCrossFadeLength
-      value: 7
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 5738031753311790473, guid: 923927c7b730484438a6a227aa0a9eb6,
         type: 3}
       propertyPath: m_TreeBillboardDistance
-      value: 28
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 5738031753311790473, guid: 923927c7b730484438a6a227aa0a9eb6,
         type: 3}

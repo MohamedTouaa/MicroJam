@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23231,7 +23231,7 @@ PrefabInstance:
     - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
         type: 3}
@@ -23252,7 +23252,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[7].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 9a116120495cf2d4a8af27757bc38367, type: 3}
+      objectReference: {fileID: 8300000, guid: f5bb11e785de47e48ad40722aa8aa4f2, type: 3}
     - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
         type: 3}
       propertyPath: sounds.Array.data[7].loop
@@ -23261,7 +23261,7 @@ PrefabInstance:
     - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
         type: 3}
       propertyPath: sounds.Array.data[7].name
-      value: intro
+      value: nar1
       objectReference: {fileID: 0}
     - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
         type: 3}
@@ -23316,7 +23316,7 @@ PrefabInstance:
     - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
         type: 3}
       propertyPath: sounds.Array.data[7].volume
-      value: 0.7
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 7418173789313000323, guid: 07fb85da2c1ff9f48a08aaecf9c60554,
         type: 3}
@@ -24167,6 +24167,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060006140584691142, guid: 877dd2ad9cd300d4686cfa0bdb02d647,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060006140584691142, guid: 877dd2ad9cd300d4686cfa0bdb02d647,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.33955148
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060006140584691142, guid: 877dd2ad9cd300d4686cfa0bdb02d647,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.33955148
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060006140584691142, guid: 877dd2ad9cd300d4686cfa0bdb02d647,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.3584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423511820036958506, guid: 877dd2ad9cd300d4686cfa0bdb02d647,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 7805387284178672356, guid: 877dd2ad9cd300d4686cfa0bdb02d647,
         type: 3}

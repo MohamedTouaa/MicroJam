@@ -13,8 +13,9 @@ public class saveP : ScriptableObject
     public int number_ship;
     public int number_cow;
     public int number_humain;
+    public int number_spawner;
 
-    public void Init(int day, int total_mobs, int number_archer, int number_solders, int number_advanced, int number_ship, int number_cow, int number_humain)
+    public void Init(int day, int total_mobs, int number_archer, int number_solders, int number_advanced, int number_ship, int number_cow, int number_humain,int number_spawner)
     {
         this.day = day;
         this.total_mobs = total_mobs;
@@ -24,5 +25,6 @@ public class saveP : ScriptableObject
         this.number_ship = number_ship;
         this.number_cow = number_cow;
         this.number_humain = number_humain;
+        this.number_spawner = number_spawner;
     }
 }

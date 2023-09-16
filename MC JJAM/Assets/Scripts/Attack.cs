@@ -12,6 +12,11 @@ public class AxeAttack : MonoBehaviour
     audioManagers mm;
     private void Start()
     {
+
+        if (game_stat.day == 1)
+        {
+            mm.playS("nar2");
+        }
         GameObject a = GameObject.Find("Player");
         mm = a.transform.GetChild(3).GetComponent<audioManagers>();
         game_stat.number_cow = 0;
@@ -25,6 +30,7 @@ public class AxeAttack : MonoBehaviour
         {
             isAttacking = true;
             mm.playS("sword");
+            mm.playS("attack");
             GetComponent<Animator>().SetTrigger("Attack");
         }
         sheep.text = " sheep : " + game_stat.number_ship;

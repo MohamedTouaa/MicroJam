@@ -26,7 +26,7 @@ public class Hunt_Manager : MonoBehaviour
     {
         current_m = 0;
         if (gameStat.day > 0)
-            timer -= gameStat.day * 5;
+            timer -= gameStat.day * 7;
 
     }
 
@@ -53,9 +53,14 @@ public class Hunt_Manager : MonoBehaviour
             if (ms[2].activeInHierarchy)
             {
                 timer2-=Time.deltaTime;
-                if(timer2 <= 0) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                if (timer2 <= 0)
+                {
+                    gameStat.day++;
 
-            }
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                }
+
+                }
         }
     }
 
