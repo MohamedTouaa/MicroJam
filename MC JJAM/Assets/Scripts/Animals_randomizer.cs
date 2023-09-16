@@ -12,7 +12,11 @@ public class Animals_randomizer : MonoBehaviour
     public int pathCount = 0;
     private void Awake()
     {
-
+        GameObject a = GameObject.Find("paths");
+        foreach (Transform t in a.transform)
+        {
+            paths.Add(t);
+        }
 
     }
     private void Start()

@@ -19,6 +19,8 @@ public class Hunt_Manager : MonoBehaviour
     [SerializeField] TextMeshProUGUI solder_kill;
     [SerializeField] TextMeshProUGUI day;
 
+
+
     void Start()
     {
         current_m = 0;
@@ -63,4 +65,6 @@ public class Hunt_Manager : MonoBehaviour
         appearMenu(ms[current_m+1]);
         current_m++;
     }
+
+   
 }
